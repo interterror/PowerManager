@@ -27,8 +27,8 @@
 
   // YOUR MYSQL DB
   $cfg['MySQL_Server'] = '127.0.0.1';
-  $cfg['MySQL_User']   = 'jk';
-  $cfg['MySQL_Passwd'] = 'kafkaka';
+  $cfg['MySQL_User']   = 'user';
+  $cfg['MySQL_Passwd'] = 'password';
   $cfg['MySQL_DB']     = 'powermanager';
 
 

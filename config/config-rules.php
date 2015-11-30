@@ -35,27 +35,17 @@ REPEAT - how many times can be action executed (0 = INFINITE) - counter is reset
 -----------------------------------------------
 
 CONDITIONS, ACTIONS, and ELSE ACTIONS are arrays. You can set any number of them for single rule.
+
+
+EXAMPLE:
+$rule['PC-ON-NIGHT-LIGHTS-ON']['title'] = "SWITCH LIGHTS ON WHEN PC IS ON, AND ITS NIGHT TIME";
+$rule['PC-ON-NIGHT-LIGHTS-ON']['condition'][0] = "PC;POWER;>;10";
+$rule['PC-ON-NIGHT-LIGHTS-ON']['condition'][1] = "SCHEDULE;16:00:00;4:00:00;";
+$rule['PC-ON-NIGHT-LIGHTS-ON']['action'][0] = "LIGHTS;OUTPUT;ON";
+$rule['PC-ON-NIGHT-LIGHTS-ON']['repeat'] = 1;
 */
 
-$rule['ERA-ON-AV-ON']['title'] = "ZAPNOUT MONITORY S PC";
-$rule['ERA-ON-AV-ON']['condition'][0] = "ERA;OUTPUT;=;1";
-$rule['ERA-ON-AV-ON']['action'][0] = "AUDIO/VIDEO;OUTPUT;ON";
 
-$rule['ERA-OFF-AV-OFF']['title'] = "VYPNOUT MONITORY S PC";
-$rule['ERA-OFF-AV-OFF']['condition'][0] = "ERA;OUTPUT;=;0";
-$rule['ERA-OFF-AV-OFF']['action'][0] = "AUDIO/VIDEO;OUTPUT;OFF";
-
-$rule['ERA-OFF-LIGHTS-OFF']['title'] = "ZAPNOUT SVĚTLA S PC A ČASEM 16";
-$rule['ERA-OFF-LIGHTS-OFF']['condition'][0] = "ERA;OUTPUT;=;1";
-$rule['ERA-OFF-LIGHTS-OFF']['condition'][1] = "SCHEDULE;16:00:00;4:00:00;";
-$rule['ERA-OFF-LIGHTS-OFF']['action'][0] = "LIGHTS;OUTPUT;ON";
-$rule['ERA-OFF-LIGHTS-OFF']['repeat'] = 1;
-
-$rule['ERA-ON-LIGHTS-ON']['title'] = "VYPNOUT SVĚTLA S PC A ČASEM 4";
-$rule['ERA-ON-LIGHTS-ON']['condition'][0] = "ERA;OUTPUT;=;0";
-$rule['ERA-ON-LIGHTS-ON']['condition'][1] = "SCHEDULE;3:00:00;16:00:00;";
-$rule['ERA-ON-LIGHTS-ON']['action'][0] = "LIGHTS;OUTPUT;OFF";
-$rule['ERA-ON-LIGHTS-ON']['repeat'] = 1;
 
 
 
