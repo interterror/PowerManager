@@ -27,7 +27,7 @@ include ("config/config-gui.php");
 
                                 if (array_search($logname, $uN)) { if ($logpass == $uP[array_search($logname, $uN)]) { $_SESSION['status'] = "GRANTED";
                                                                                                                        $_SESSION['user'] = $logname;
-                                                                                                                       header( 'Location: index.php' ); }; 
+                                                                                                                       header( 'Location: server.php' ); }; 
                                                                                                                      } 
                                                                                                                      else
                                                                                                                      { $_SESSION['status'] = "DENIED";
@@ -35,7 +35,7 @@ include ("config/config-gui.php");
                                                                                                                      }
 
                                 if ($logname == "") { $info  = "ENTER LOGNAME.<br>"; }
-                                if ($logpass == "") { $info .= "ENTER LOGPASS."; }   
+                                if ($logpass == "") { $info .= "ENTER LOGPASS."; }  
                                 
                                 }   
   
@@ -55,7 +55,7 @@ include ("config/config-gui.php");
 <div id="logbox">
 <table width="100%">
 <tr><td colspan="2" id="head"><h2>POWER MANAGER LOGIN</h2></td></tr>
-<form  style="padding: 0; margin: 0;" action="login.php" method="POST">
+<form  style="padding: 0; margin: 0;" action="login-server.php" method="POST">
 <tr><td><input type="text"      name="logname"  style="width: 140px" /></td><td><h1>NAME</h1></td></tr>
 <tr><td><input type="password"  name="logpass"  style="width: 140px" /></td><td><h1>PASSWORD</h1></td></tr>
 <tr><td colspan="2"><input name="sender" class="butt"  type="submit"  value="LOG IN"></td></tr>

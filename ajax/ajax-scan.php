@@ -124,7 +124,7 @@ function checker($device)
 
         }
 
-function checkRules()
+function checkRules($allowRunAction)
          {
          global $rule;
          global $output;
@@ -145,7 +145,9 @@ function checkRules()
                  $rulesResult[$key]['repeat'] = $repeat;
 
                  
-                 if (checkConditions($value['condition'])) { $rulesResult[$key]['status'] = "TRUE"; runActions($rulesResult[$key]); } else { $rulesResult[$key]['status'] = "FALSE"; runActions($rulesResult[$key]); }
+                 if (checkConditions($value['condition'])) { $rulesResult[$key]['status'] = "TRUE"; } else { $rulesResult[$key]['status'] = "FALSE"; }
+                 
+                 if ($allowRunAction) runActions($rulesResult[$key]);
                  }
 
                  //echo("<pre>");
@@ -336,12 +338,16 @@ elseif ($task == "snapshot")
    $resultData['status'] = "done";
    }
 
-elseif ($task == "rules")
+elseif ($task == "readOnly")
    {
-   checker();
-   checkRules();
+   foreach ($m as $key=>$value)
+   {
+    checker($key);
+   }
+   checkRules(false);
 
-   $resultData['outlets'] = $outletsResult;
+   $resultData['other'] = $otherData;
+   $resultData['outlets'] = $sensorData;
    $resultData['rules'] = $rulesResult;
    }
 
@@ -356,7 +362,7 @@ elseif ($task == "rules")
    //echo("<pre>");
    //print_r($sensorData);
    
-   checkRules();
+   checkRules(true);
  
    $resultData['other'] = $otherData;
    $resultData['outlets'] = $sensorData;
