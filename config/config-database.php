@@ -3,17 +3,11 @@
   // YOUR TIMEZONE
   $db['timezone'] = "Europe/Prague";
 
-  // IP ALLOWED TO WRITE DATA TO DB
-  $db['writeIp'] = "10.0.0.100";
-
   // INTERVAL FOR DATA SAVING IN SECONDS
   $db['snapshotInterval'] = 60;
 
   // START SAVING DATA WITH APP START - on/off
   $db['snapshotStartup'] = "off";
-
-  // DISABLE GRAPHS REFRESH WHEN SAVING DATA IS ENABLED (RECOMMENDED, BROWSER SOMETIMES CRASHES WHEN UPDATING GRAPHS)
-  $db['disableGraphUpdateWhenSaving'] = "on";
 
   // GRAPH TIME INTERVAL - last, hour, today, lastweek, custom
   $db['graphInterval'] = "today";
