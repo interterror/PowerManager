@@ -36,9 +36,9 @@ USING POWER MANAGER:
 
 1. After entering application, the page set as default in config-gui.php is initially displayed.
 2. You can switch between pages by clicking buttons OUTLETS, GRAPHS, and RULES in the bottom right.
-3. [SERVER] You can start saving data by clicking SAVE DATA. Data will be saved in intervals specified in config-database.php (must be >0)
+3. [SERVER] You can start saving data by clicking button SAVE DATA. Data will be saved in intervals specified in config-database.php (must be >0). When data saving is active, the button is green. When inactive, button is red. The page DATA COLLECTION contains timesheet of previous data inserts to database.
 4. You can refresh displayed data by clicking REFRESH or waiting for number of seconds specified in config-gui.php (if 0, no auto refresh)
-5. You can switch outlet by clicking appropriate box in OUTLETS page.
+5. You can switch outlet on/off by clicking appropriate box in OUTLETS page.
 6. [CLIENT] On the graph page, graphs for outlets defined in config-devices.php are displayed. You can change content of the graph by clicking appropriate button.
 
 
@@ -59,5 +59,7 @@ TO-DO:
 COLORS MEANING:
 
 YELLOW: Data are being updated / Data are being saved.
+
 GREEN: Outlet is ON. Rule condition is met. Saving data to db is active.
+
 RED: Outlet is OFF. Rule condition has not been met. Saving data to db is inactive.
