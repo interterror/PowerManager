@@ -2,12 +2,13 @@
 Free, open-source alternative to mFi Controller.
 
 Power Manger consists of two parts. Server (server.php) and client (index.php). Server part is supposed to run persistently on the server. It writes data from outlets to database, and evaluates rules.
-Client part is only for displaying status of your rules, graphs of saved data (they need to be in database first), and controlling outlets.
+Client part is only for displaying states of your rules, graphs of saved data (they need to be stored in database first), and controlling outlets.
 
 
-HOW-TO - SETUP
+INSTALLATION
+------------
 
-CONIFUGRE DEVICES
+CONFIGURE DEVICES
 
 1. Install your mfi outlets, and obtain their IP addresses, log name and password.
 2. Open file config/config-device.php
@@ -35,16 +36,16 @@ USING POWER MANAGER:
 
 1. After entering application, the page set as default in config-gui.php is initially displayed.
 2. You can switch between pages by clicking buttons OUTLETS, GRAPHS, and RULES in the bottom right.
-3. You can start saving data by clicking SAVE DATA. Data will be saved in intervals specified in config-database.php (must be >0)
+3. [SERVER] You can start saving data by clicking SAVE DATA. Data will be saved in intervals specified in config-database.php (must be >0)
 4. You can refresh displayed data by clicking REFRESH or waiting for number of seconds specified in config-gui.php (if 0, no auto refresh)
 5. You can switch outlet by clicking appropriate box in OUTLETS page.
-6. On the graph page, graphs for outlets defined in config-devices.php are displayed. You can change content of the graph by clicking appropriate button.
+6. [CLIENT] On the graph page, graphs for outlets defined in config-devices.php are displayed. You can change content of the graph by clicking appropriate button.
 
 
 GENERAL USE:
 
 You´ve got two options to use Power Manager:
-1. Let it run in the browser on your server.
+1. Let the server part run in the browser on your server.
 2. Set CRON or TASK to run php scripts ajax_scan.php (for rules evaluation), and ajax_scan.php?task=snapshot (to save data to db).
 
 
