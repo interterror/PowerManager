@@ -1,6 +1,10 @@
 # PowerManager
 Free, open-source alternative to mFi Controller.
 
+Power Manger consists of two parts. Server (server.php) and client (index.php). Server part is supposed to run persistently on the server. It writes data from outlets to database, and evaluates rules.
+Client part is only for displaying status of your rules, graphs of saved data (they need to be in database first), and controlling outlets.
+
+
 HOW-TO - SETUP
 
 CONIFUGRE DEVICES
