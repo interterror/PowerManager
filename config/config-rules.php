@@ -3,7 +3,7 @@
 // RULE IS DEFINED BY
 // ID - unique key of rule array
 // TITLE - your custom title
-// DEVICE - 
+
 /*
  CONDITION - is constructed as a serie of parameters delimited by ";"
  1) TARGET DEVICE - label as defined in config-devices.php
