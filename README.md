@@ -42,9 +42,11 @@ USING POWER MANAGER:
 6. [CLIENT] On the graph page, graphs for outlets defined in config-devices.php are displayed. You can change content of the graph by clicking appropriate button.
 
 
+
 GENERAL USE:
 
 You´ve got two options to use Power Manager:
+
 1. Let the server part run in the browser on your server.
 2. Set CRON or TASK to run php scripts ajax_scan.php (for rules evaluation), and ajax_scan.php?task=snapshot (to save data to db).
 
