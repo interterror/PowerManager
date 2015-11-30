@@ -16,9 +16,8 @@ CONIFUGRE DEVICES
 CONFIGURE DATABASE
 
 1. Open config/config-database.php
-2. Edit necessary parameters. Be sure to write correct IP for writeIp parameter. Only application run from this IP will be able to save to db.
-3. Set parameters of your mysql db.
-4. Set data save interval. This interval will be used to save outlet data to db. 
+2. Set parameters of your mysql db.
+3. Set data save interval. This interval will be used to save outlet data to db. 
 
 CONFIGURE RULES
 
@@ -30,7 +29,7 @@ CONFIGURE GUI
 1. Open config/config-gui.php
 2. Set name and password used to enter application.
 3. Set refresh rate interval. This interval will be used to load new data and evaluate rules.
-4. Set amounts of columns for each page - self-explanatory.
+4. Set amounts of columns for each page to display outlets, graphs, and rules.
 
 USING POWER MANAGER:
 
@@ -48,11 +47,6 @@ You´ve got two options to use Power Manager:
 1. Let it run in the browser on your server.
 2. Set CRON or TASK to run php scripts ajax_scan.php (for rules evaluation), and ajax_scan.php?task=snapshot (to save data to db).
 
-
-BUGS TO WATCH OUT:
-
-1. Updating larger amount of graphs results in browser crash from time to time. I disabled graphs updating on client where data saving is enabled (can be changed in config-database.php, parameter disableGraphUpdateWhenSaving).
-Until I find out whats causing this, I recommend reviewing graphs from separate client.
 
 
 TO-DO:
