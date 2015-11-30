@@ -26,6 +26,7 @@
   $db['endGraph'] = "2015-11-30 22:00:00";
 
   // YOUR MYSQL DB
+  // APP NEEDS RIGHT TO CREATE TABLES - EACH DEVICE IS PROVIDED WITH SEPARATE TABLE FOR EASY MAINTAIN
   $cfg['MySQL_Server'] = '127.0.0.1';
   $cfg['MySQL_User']   = 'user';
   $cfg['MySQL_Passwd'] = 'password';
