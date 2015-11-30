@@ -5,19 +5,24 @@
 // TITLE - your custom title
 
 /*
- CONDITION - is constructed as a serie of parameters delimited by ";"
+ CONDITION - is constructed as a series of parameters delimited by ";"
  1) TARGET DEVICE - label as defined in config-devices.php
  2) PARAMETER - can be power,powerfactor,voltage,current,output
- 3) COMPARATOR - < or >
+ 3) COMPARATOR - <, =, or >
  4) VALUE - compared value 
 
- example: PC;POWER;>;100 = If outlet defined as PC has higher power than 100.
+ example: PC;POWER;>;100 = If outlet defined as PC has higher power than 100 W.
 
  SCHEDULE - specific condition
- If first parameter is SCHEDULE, specific rule is applied.
- 2) Start time
- 3) End time
+ If first parameter is SCHEDULE, specific scheduling rule is applied.
+ 2) Second parameter becomes Start time
+ 3) Third parameter becomes End time
  4) [OPTIONAL] Day of Week (1 - Monday, 7 - Sunday)
+ 
+ This condition is met when current time is between start time and end time, and optionally is appropriate day in week.
+ Days in week can be multiple when separated by "-" such as in "1-2-5" (Monday, Tuesday, Friday).
+ 
+ example: SCHEDULE;16:00:00;20:00:00;1-3-7 = Condition is met between 16:00 and 20:00 hours at Monday, Wednesday and Sunday.
  ------------------------------------------------------------------------------
 
  ACTION - similar to condition
