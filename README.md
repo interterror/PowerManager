@@ -54,14 +54,14 @@ You´ve got two options to use Power Manager:
 
 TO-DO:
 
-1. Add total consumption option to graphs.
-2. Add more info to outlets page.
+1. Create rules editor
+2. Create devices editor
+3. Add total consumption option to graphs.
+4. Add more info to outlets page.
 
 
 COLORS MEANING:
 
 YELLOW: Data are being updated / Data are being saved.
-
 GREEN: Outlet is ON. Rule condition is met. Saving data to db is active.
-
 RED: Outlet is OFF. Rule condition has not been met. Saving data to db is inactive.
