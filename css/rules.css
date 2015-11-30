@@ -1,0 +1,4 @@
+
+.rule { width: 50%; height: 25%; position: relative; display: inline-table; border: 1px solid #CCC;  box-sizing: border-box; border-spacing: collapse; vertical-align: top; }
+.rule_inner { display: table-cell; vertical-align: middle; font-family: Verdana,sans-serif; text-align: center; font-size: 15pt; width: 50%; }
+
