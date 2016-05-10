@@ -11,6 +11,7 @@ include ("config/config-rules.php");
 include ("config/config-gui.php");
 include ("config/config-database.php");
 
+if ($_GET['a']) $verze = "mobile"; else $verze = "desktop";
 ?>
 
 <!DOCTYPE html>
@@ -23,10 +24,9 @@ include ("config/config-database.php");
         <link href="css/outlets.css" rel="stylesheet" type="text/css" />
         <link href="css/graphs.css" rel="stylesheet" type="text/css" />
         <link href="css/rules.css" rel="stylesheet" type="text/css" />
+        <?php if ($verze == "mobile") { ?> <link href="css/mobile.css" rel="stylesheet" type="text/css" /><?php } ?>
 
         <script src="js/jquery-2.1.4.min.js"></script>
-        <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-        <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
         <style>
 
@@ -242,8 +242,13 @@ function updateMainButtons()
 
 
 // GRAPHS
-    
 
+window.UpdateGraphs = function()
+         {
+
+         }
+    
+/*
 
     google.load('visualization', '1', {'packages':['corechart']});
     google.setOnLoadCallback(drawChart);
@@ -384,8 +389,9 @@ window.LoadDefaultGraphs = function()
 
 LoadDefaultGraphs();
 
-      }
 
+      }
+*/
 </script>
 
 </head>
@@ -432,7 +438,7 @@ LoadDefaultGraphs();
     </div>
 
         <div id="objects">
-      <div class='chart_menu'><div class='chart_title'></div><div class='button chart_changetype' data-type='power'><h1>PWR</h1></div><div class='button chart_changetype' data-type='voltage'><h1>VLTG</h1></div><div class='button chart_changetype' data-type='current'><h1>CURR</h1></div><div class='button chart_changetype' data-type='powerfactor'><h1>PWRFCTR</h1></div><div class='button chart_changetype' data-type='thismonth'><h1>MNTH</h1></div><div class='button chart_changetype' data-type='output'><h1>OTPT</h1></div></div>
+      <div class='chart_menu'><div class='chart_title'></div><div class='button chart_changetype' data-type='power'><h1>PWR</h1></div><div class='button chart_changetype' data-type='voltage'><h1>VLTG</h1></div><div class='button chart_changetype' data-type='current'><h1>CURR</h1></div><div class='button chart_changetype' data-type='powerfactor'><h1>PWRFCTR</h1></div><div class='button chart_changetype' data-type='thismonth'><h1>MNTH</h1></div><div class='button chart_changetype' data-type='output'><h1>OTPT</h1></div><div class='button chart_changetype' data-type='kwh'><h1>KWH</h1></div></div>
 
       <div class="rule">
          <div class="rule_inner">

@@ -1,11 +1,7 @@
 POWER MANAGER
 -------------
 
-Power Manger consists of two parts. Server (server.php) and client (index.php). Server part is supposed to run persistently on the server. It writes data from outlets to database, and evaluates rules.
-Client part is only for displaying status of your rules, graphs of saved data (they need to be in database first), and controlling outlets.
-
-
-HOW-TO: SETUP
+HOW-TO - SETUP
 
 CONIFUGRE DEVICES
 1. Install your mfi outlets, and obtain their IP addresses, log name and password.
@@ -14,8 +10,9 @@ CONIFUGRE DEVICES
 
 CONFIGURE DATABASE
 1. Open config/config-database.php
-2. Set parameters of your mysql db.
-3. Set data save interval. This interval will be used to save outlet data to db. 
+2. Edit necessary parameters. Be sure to write correct IP for writeIp parameter. Only application run from this IP will be able to save to db.
+3. Set parameters of your mysql db.
+4. Set data save interval. This interval will be used to save outlet data to db. 
 
 CONFIGURE RULES
 1. Open config/config-rules.php
@@ -25,7 +22,7 @@ CONFIGURE GUI
 1. Open config/config-gui.php
 2. Set name and password used to enter application.
 3. Set refresh rate interval. This interval will be used to load new data and evaluate rules.
-4. Set amounts of columns for each page to display outlets, graphs, and rules.
+
 
 USING POWER MANAGER:
 1. After entering application, the page set as default in config-gui.php is initially displayed.
@@ -38,13 +35,9 @@ USING POWER MANAGER:
 
 GENERAL USE:
 You´ve got two options to use Power Manager:
-1. Start webpage server.php in the browser, and let it run on your server.
+1. Let it run in the browser on your server.
 2. Set CRON or TASK to run php scripts ajax_scan.php (for rules evaluation), and ajax_scan.php?task=snapshot (to save data to db).
 
-
-TO-DO:
-1. Add total consumption option to graphs.
-2. Add more info to outlets page.
 
 
 COLORS MEANING:
